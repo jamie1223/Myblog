@@ -1,0 +1,43 @@
+{% extends "origin.html" %}
+
+{% block content %}
+<hr>
+<nav class="am-g am-g-fixed blog-fixed blog-nav">
+<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse" id="blog-collapse">
+    <ul class="am-nav am-nav-pills am-topbar-nav">
+      <li><a href="/index/">首页</a></li>
+      <li><a href="/article/">随笔</a></li>
+      <li class="am-active"><a href="/dream/">梦境</a></li>
+      <li><a href="/tojun/">与君说</a></li>
+    </ul>
+    <form class="am-topbar-form am-topbar-right am-form-inline" role="search">
+      <div class="am-form-group">
+        <input type="text" class="am-form-field am-input-sm" placeholder="搜索">
+      </div>
+    </form>
+  </div>
+</nav>
+<hr>
+<div class="am-g am-g-fixed blog-fixed">
+    <div class="am-u-md-12 am-u-sm-12">
+        {% for a in a_list %}
+        <article class="am-g blog-entry-article">
+            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+                <span><a href="" class="blog-color">dream &nbsp;</a></span>
+                <span> @海千 &nbsp;</span>
+                <span>{{ a.create_datatime }}</span>
+                <p>{{ a.index }}</p>
+                <p><a href="" class="blog-continue">continue reading</a></p>
+            </div>
+        </article>
+        {% endfor %}
+        <ul class="am-pagination">
+  <li class="am-pagination-prev"><a href="">&laquo; Prev</a></li>
+  <li class="am-pagination-next"><a href="">Next &raquo;</a></li>
+</ul>
+    </div>
+
+</div>
+{% endblock %}
