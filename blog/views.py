@@ -4,7 +4,7 @@ from django.utils.safestring import mark_safe
 # Create your views here.
 
 def index(request):
-    article_list = models.Article.objects.all()
+    article_list = models.Article.objects.all().order_by("-id")
 
     return render(request,'index.html',{'a_list':article_list})
 
