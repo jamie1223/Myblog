@@ -15,3 +15,7 @@ class Jun(models.Model):
     create_datatime = models.DateTimeField(auto_now_add=True)
     create_data = models.DateField(auto_now_add=True)
 
+class Dream(models.Model):
+    content = models.TextField(max_length=400)
+    create_datatime = models.DateTimeField(auto_now_add=True)
+    create_data = models.DateField(auto_now_add=True)
