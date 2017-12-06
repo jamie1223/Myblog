@@ -15,17 +15,17 @@ def test(request):
         return render(request, 'test.html', {'a_list':article_list})
 
 def article(request):
-    article_list = models.Article.objects.all()
+    article_list = models.Article.objects.all().order_by("-id")
 
     return render(request, 'article.html', {'a_list': article_list})
 
 def dream(request):
-    article_list = models.Article.objects.all()
+    article_list = models.Article.objects.all().order_by("-id")
 
     return render(request, 'dream.html', {'a_list': article_list})
 
 def tojun(request):
-    mood_list = models.Jun.objects.all()
+    mood_list = models.Jun.objects.all().order_by("-id")
 
     return render(request, 'tojun.html', {'m_list': mood_list})
 
