@@ -20,6 +20,7 @@
   <meta name="msapplication-TileColor" content="#0e90d2">
   <link rel="stylesheet" href="/static/assets/css/amazeui.min.css" >
   <link rel="stylesheet" href="/static/assets/css/app.css" >
+  <link rel="stylesheet" href="/static/assets/css/privacy.css" >
 </head>
 
 <body id="blog">
@@ -33,7 +34,7 @@
 
   <footer class="blog-footer">
     <div class="am-g am-g-fixed blog-fixed am-u-sm-centered blog-footer-padding ">
-        <div class="am-u-sm-12 am-u-md-4- am-u-lg-4 blog-text-center" style="left:50%;margin-left:-200px;">
+        <div class="am-u-sm-12 am-u-md-4- am-u-lg-4 blog-text-center footer-center">
             <h3>社交账号</h3>
             <p>
                 <a href=""><span class="am-icon-qq am-icon-fw am-primary blog-icon blog-icon"></span></a>
@@ -42,11 +43,12 @@
                 <a href=""><span class="am-icon-reddit am-icon-fw blog-icon blog-icon"></span></a>
                 <a href=""><span class="am-icon-weixin am-icon-fw blog-icon blog-icon"></span></a>
             </p>
-            <h3>Credits</h3>
-            <p>细细探索事情的真相，就会发现，你为之难过的，只是幻觉。它跟事情没有关系。</p>          
+            <h3>Quote</h3>
+            <p>{{ footer.content }}</p>
         </div>
-    </div>    
-    <div class="blog-text-center" >Powered by: Django AmazeUI AWS Glyphicons Halflings|Author:Jamie </div>  </footer>
+    </div>
+    <div class="blog-text-center" >Powered by: Django AmazeUI Mysql Virmach | Author:Jamie </div>  </footer>
+
 
 
 
