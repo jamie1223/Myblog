@@ -25,15 +25,14 @@
         {% for a in a_list %}
         <article class="am-g blog-entry-article">
             <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                <img src="/static/assets/i/f10.jpg" alt="" class="am-u-sm-12">
+                <img src="{{ a.pic_link }}" alt="" class="am-u-sm-12">
             </div>
             <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                <span><a href="" class="blog-color">article &nbsp;</a></span>
-                <span> @海千 &nbsp;</span>
+                <span><a href="/article/" class="blog-color">article &nbsp;</a></span>
+                <span> @{{ author.name }} &nbsp;</span>
                 <span>{{ a.create_data }}</span>
-                <h1><a href="">{{ a.title }}</a></h1>
+                <h1><a href="/article_content/?aid={{ a.id }}">{{ a.title }}</a></h1>
                 <p>{{ a.index }}</p>
-                <p><a href="" class="blog-continue">continue reading</a></p>
             </div>
         </article>
         {% endfor %}
