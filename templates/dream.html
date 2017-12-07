@@ -22,13 +22,13 @@
 <hr>
 <div class="am-g am-g-fixed blog-fixed">
     <div class="am-u-md-12 am-u-sm-12">
-        {% for a in a_list %}
+        {% for d in d_list %}
         <article class="am-g blog-entry-article">
             <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                <span><a href="" class="blog-color">dream &nbsp;</a></span>
-                <span> @海千 &nbsp;</span>
-                <span>{{ a.create_datatime }}</span>
-                <p>{{ a.index }}</p>
+                <span><a href="/dream/" class="blog-color">dream &nbsp;</a></span>
+                <span> @{{ author.name}} &nbsp;</span>
+                <span>{{ d.create_datatime }}</span>
+                <p align="left">{{ d.content }}</p>
                 <p><a href="" class="blog-continue">continue reading</a></p>
             </div>
         </article>
