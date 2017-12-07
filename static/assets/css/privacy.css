@@ -1,0 +1,21 @@
+/* 此处开始是自定义的一些css*/
+ .footer-center{
+            left:50%;
+            margin-left: -200px;
+ }
+ /* 用来设置页脚居中，已经响应式居中*/
+@media only screen and (max-width:640px) {
+        .footer-center{
+            margin: 0 auto;
+            left:0;
+    }
+}
+
+.hide-element{
+}
+
+@media only screen and (max-width:640px) {
+     .hide-element{
+    display: none;
+    }
+}
