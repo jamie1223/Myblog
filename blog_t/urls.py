@@ -20,7 +20,6 @@ from blog import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/',views.index),
-    url(r'^test/',views.test),
     url(r'^article/',views.article),
     url(r'^dream/',views.dream),
     url(r'^tojun/',views.tojun),
