@@ -28,7 +28,7 @@ SECRET_KEY = '+79#gfdn6^rj8+35ljogh)gm-#@djoo1fx(1qj*+r^x9@eltfq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["104.168.30.1990",".daydream.zone"]
+ALLOWED_HOSTS = [".daydream.zone"]
 
 
 # Application definition
