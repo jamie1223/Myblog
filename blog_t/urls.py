@@ -18,6 +18,7 @@ from django.contrib import admin
 from blog import views
 
 urlpatterns = [
+    url(r'^$', views.index),
     url(r'^admin/', admin.site.urls),
     url(r'^index/',views.index),
     url(r'^article/',views.article),
