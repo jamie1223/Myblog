@@ -28,11 +28,11 @@
 }
 
 /*设置内容居中*/
-.img-title {
+.img-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.img-title img {
+.img-center img {
   width: 95%;
 }
