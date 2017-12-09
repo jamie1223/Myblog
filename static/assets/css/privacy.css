@@ -11,6 +11,7 @@
     }
 }
 
+/*设置图片的链接页面在手机端隐藏。*/
 .hide-element{
 }
 
@@ -18,4 +19,20 @@
      .hide-element{
     display: none;
     }
+}
+
+/*设置内容left*/
+
+.text-left{
+    text-align: left;
+}
+
+/*设置内容居中*/
+.img-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-title img {
+  width: 95%;
 }
