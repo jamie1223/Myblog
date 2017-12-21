@@ -27,13 +27,20 @@ class Author(models.Model):#用来统一保存作者，以防后续需要改名�
 class Footer(models.Model):#设置页脚的文字
     content = models.CharField(max_length=120,null=True)
 
-class Tag(models.Model):
+class Tag(models.Model):#标签
     content = models.CharField(max_length=8)
 
-class Words(models.Model):
+class Words(models.Model):#页脚文字
     content = models.CharField(max_length=50)
 
-class Profile(models.Model):
+class Profile(models.Model):#个人资料
     state = models.CharField(max_length=40)
     photo = models.CharField(max_length=500,null=True)
+
+class Comment(models.Model):#评论表
+    aid = models.ForeignKey(to='Article',to_field='id')
+    name = models.CharField(max_length=10)
+    contact = models.CharField(max_length=30)
+    content = models.CharField(max_length=144)
+    create_time = models.DateTimeField(auto_now_add=True,null=True)
 
