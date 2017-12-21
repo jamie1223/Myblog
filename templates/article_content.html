@@ -42,7 +42,7 @@
         <p align="left">{{ content|safe}}</p>
         </div>
       </article>
-{#未完成的自定义分享插件#}
+      
 {#        <div class="am-g blog-article-widget blog-article-margin">#}
 {#          <div class="am-u-lg-4 am-u-md-5 am-u-sm-7 am-u-sm-centered blog-text-center">#}
 {#            <hr>#}
@@ -62,30 +62,39 @@
             <p>have courage, and be kind.</p>
           </div>
         </div>
-        <hr>
-        <ul class="am-pagination blog-article-margin">
-          <li class="am-pagination-prev"><a href="#" class="">&laquo; 上一篇</a></li>
-          <li class="am-pagination-next"><a href="">下一篇 &raquo;</a></li>
-        </ul>
+      
+        {#        <hr>#}
+{#        <ul class="am-pagination blog-article-margin">#}
+{#          <li class="am-pagination-prev"><a href="#" class="">&laquo; 上一篇</a></li>#}
+{#          <li class="am-pagination-next"><a href="">下一篇 &raquo;</a></li>#}
+{#        </ul>#}
 
         <hr>
+        {% for c in comment %}
+        <article class="am-g blog-entry-article">
+            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+                <span> @{{ c.name}} &nbsp;</span>
+                <span>{{ c.create_time }}</span>
+                <p align="left">{{ c.content}}</p>
+            </div>
+        </article>
+        {% endfor %}
 
-        <form class="am-form am-g">
+        <form class="am-form am-g" method="post">
             <h3 class="blog-comment">评论</h3>
           <fieldset>
+              <input type="text" value="{{ article.id }}" name='aid_id' style="display: none"/>
+              {% csrf_token %}
             <div class="am-form-group am-u-sm-4 blog-clear-left">
-              <input type="text" class="" placeholder="名字">
-            </div>
-            <div class="am-form-group am-u-sm-4">
-              <input type="email" class="" placeholder="邮箱">
+              <input type="text" class="" placeholder="名字" name="name">{{ obj.errors.name.0 }}
             </div>
 
             <div class="am-form-group am-u-sm-4 blog-clear-right">
-              <input type="text" class="" placeholder="QQ">
+              <input type="text" class="" placeholder="邮箱或QQ等联系方式" name="contact">{{ obj.errors.contact.0 }}
             </div>
 
             <div class="am-form-group">
-              <textarea class="" rows="5" placeholder="评论暂未开放"></textarea>
+              <textarea class="" rows="5" placeholder="请输入评论..." name="content"></textarea>{{ obj.errors.content.0 }}
             </div>
 
             <p><button type="submit" class="am-btn am-btn-default">发表评论</button></p>
