@@ -18,9 +18,7 @@ class Jun(models.Model):#用来存储与君说
     content = models.TextField(max_length=400)
     create_datatime = models.DateTimeField()
     create_data = models.DateField()
-    
-    def __str__(self):#在Python3中用 __str__ 代替 __unicode__
-        return self.title
+
 
 class Dream(models.Model):#用来存储梦境
     content = models.TextField(max_length=400)
